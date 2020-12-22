@@ -345,7 +345,11 @@
 {% endif %}
 
 <!-- jQuery -->
-<script src="{% static "admin/js/vendor/jquery/jquery.js" %}"></script>
+<script>
+var $ = django.jQuery;
+var jQuery = django.jQuery;
+</script>
+<!-- <script src="{% static "admin/js/vendor/jquery/jquery.js" %}"></script> -->
 <!-- Bootstrap 4 -->
 <script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
 <!-- AdminLTE App -->
