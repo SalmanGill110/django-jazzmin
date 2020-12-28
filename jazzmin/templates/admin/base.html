@@ -345,9 +345,15 @@
 {% endif %}
 
 <!-- jQuery -->
-<script>
-var $ = django.jQuery;
-var jQuery = django.jQuery;
+<script type="text/javascript">
+    
+    if(typeof django !== 'undefined'){
+        var $ = django.jQuery;
+		var jQuery = django.jQuery;
+    }else{
+		document.write('<scri'+'pt src="{% static "admin/js/vendor/jquery/jquery.js" %}"></'+'script>');
+    }
+    
 </script>
 <!-- <script src="{% static "admin/js/vendor/jquery/jquery.js" %}"></script> -->
 <!-- Bootstrap 4 -->
